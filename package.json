@@ -1,0 +1,22 @@
+{
+  "name": "ezselect",
+  "version": "1.0.0",
+  "description": "DOM Element Selection Made Easy.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RekkyRek/ezselect.git"
+  },
+  "keywords": [
+    "DOM"
+  ],
+  "author": "rekkyrek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RekkyRek/ezselect/issues"
+  },
+  "homepage": "https://github.com/RekkyRek/ezselect#readme"
+}
