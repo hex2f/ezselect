@@ -7,10 +7,19 @@ try {
   throw 'Could not find document. Please use ez(el, doc) to use the correct document.';
 }
 
+function Element(elm) {
+  this.element = doc_node.querySelector(elm);
+  this.css = (prop, val) => {
+    this.element.style[prop] = val;
+  }
+  return this.element;
+}
+
 module.exports = function(elm, doc) {
   if(doc_node == undefined) throw 'Document node is not set. Please use ez(elm, doc) to use the correct document.';
   try {
-    return document.querySelector(elm);
+    console.log(elm)
+    return new Element(elm);
   } catch (e) {
     throw `Oops. Something went wrong.  Error: ${e}`;
   }
@@ -19,6 +28,7 @@ module.exports = function(elm, doc) {
 },{}],2:[function(require,module,exports){
 var ez = require('../index')
 
-console.log(ez('title'));
+console.log(ez('body'));
+ez('#meme').css('background', '#ABCDEF')
 
 },{"../index":1}]},{},[2]);

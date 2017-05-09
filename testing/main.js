@@ -1,3 +1,4 @@
 var ez = require('../index')
 
-console.log(ez('title'));
+console.log(ez('body'));
+ez('#meme').css('background', '#ABCDEF')
