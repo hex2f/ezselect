@@ -3,14 +3,11 @@ var doc_node;
 try {
   doc_node = document;
 } catch (e) {
-  throw 'Could not find document. Please use setDocumentNode() to set document node.';
+  throw 'Could not find document. Please use ez(el, doc) to use the correct document.';
 }
 
-exports.setDocumentNode = function(doc) {
-  doc_node = doc;
-}
-exports.default = function(elm) {
-  if(doc_node == undefined) throw 'Document node is not set. Please use setDocumentNode() to set document node.';
+module.exports = function(elm, doc) {
+  if(doc_node == undefined) throw 'Document node is not set. Please use ez(elm, doc) to use the correct document.';
   try {
     return document.querySelector(elm);
   } catch (e) {
