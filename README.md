@@ -7,5 +7,7 @@
 #### Some other examples
 
 ```const someDivWithAClass = ez('div.class')```
+
 ```const someDivWithAnId = ez('div#someid')```
+
 ```const documentBody = ez('body')```
