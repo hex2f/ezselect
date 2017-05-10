@@ -1,6 +1,5 @@
 {
   "commands": [
-    "index.js : browserify ./testing/main.js -o ./testing/bundle.js",
-    "testing/main.js : browserify ./testing/main.js -o ./testing/bundle.js"
+
   ]
 }
