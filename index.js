@@ -10,7 +10,7 @@ module.exports = function(elm, doc) {
   if(doc_node == undefined) throw 'Document node is not set. Please use ez(elm, doc) to use the correct document.';
   if(doc != undefined) doc_node = doc;
   try {
-    return doc_node.querySelector(elmname);
+    return doc_node.querySelector(elm);
   } catch (e) {
     throw `Oops. Something went wrong.  Error: ${e}`;
   }
