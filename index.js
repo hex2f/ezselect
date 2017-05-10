@@ -6,19 +6,27 @@ try {
   throw 'Could not find document. Please use ez(el, doc) to use the correct document.';
 }
 
-function Element(elm) {
-  this.element = doc_node.querySelector(elm);
+function EZElement(elmname) {
+  this.el = doc_node.querySelector(elmname);
   this.css = (prop, val) => {
-    this.element.style[prop] = val;
+    this.el.style[prop] = val;
   }
-  return this.element;
+  this.on = (ev,func) => {
+    try {
+      this.el.addEventListener(ev, func);
+    } catch (e) {
+      throw e;
+    }
+  }
+  return this;
 }
 
 module.exports = function(elm, doc) {
   if(doc_node == undefined) throw 'Document node is not set. Please use ez(elm, doc) to use the correct document.';
+  if(doc != undefined) doc_node = doc;
   try {
     console.log(elm)
-    return new Element(elm);
+    return new EZElement(elm);
   } catch (e) {
     throw `Oops. Something went wrong.  Error: ${e}`;
   }
