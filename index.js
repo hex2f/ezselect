@@ -8,17 +8,7 @@ try {
 
 function EZElement(elmname) {
   this.el = doc_node.querySelector(elmname);
-  this.css = (prop, val) => {
-    this.el.style[prop] = val;
-  }
-  this.on = (ev,func) => {
-    try {
-      this.el.addEventListener(ev, func);
-    } catch (e) {
-      throw e;
-    }
-  }
-  return this;
+  return this.el;
 }
 
 module.exports = function(elm, doc) {
